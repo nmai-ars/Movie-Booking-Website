@@ -1,0 +1,130 @@
+.backgroundBodyUser {
+    background-image: url('https://i.ibb.co/Ybnw70Q/homeappbg.jpg'); // Hoặc hình nền bạn đang dùng
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+
+    .forgetForm {
+        background-color: rgba(0, 0, 0, 0.75);
+        padding: 40px 60px;
+        border-radius: 8px;
+        width: 450px;
+        color: white;
+        position: relative;
+
+        .img__link {
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-bottom: 20px;
+
+            .img__logo {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin-bottom: 10px;
+                }
+
+                .text-logo {
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #0022a8;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .formMessage {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 16px;
+            color: #ddd;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+
+            .input {
+                width: 100%;
+                padding: 12px 15px;
+                border-radius: 4px;
+                border: none;
+                background-color: #333;
+                color: white;
+                outline: none;
+
+                &::placeholder {
+                    color: #8c8c8c;
+                }
+            }
+
+            .btnLogin {
+                width: 100%;
+                padding: 12px;
+                background-color: #0022a8;
+                color: white;
+                border: none;
+                border-radius: 4px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: #0022a8;
+                }
+
+                &:disabled {
+                    background-color: #555;
+                    cursor: not-allowed;
+                }
+            }
+
+            .text-light {
+                color: #b3b3b3;
+                text-decoration: none;
+                font-size: 14px;
+
+                &:hover {
+                    text-decoration: underline;
+                    color: white;
+                }
+            }
+
+            .text-danger {
+                color: #e87c03;
+                font-size: 13px;
+                margin-top: 5px;
+                display: block;
+            }
+        }
+
+        .close__btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 20px;
+                height: 2px;
+                background-color: #fff;
+            }
+            &::before { transform: translate(-50%, -50%) rotate(45deg); }
+            &::after { transform: translate(-50%, -50%) rotate(-45deg); }
+        }
+    }
+}
